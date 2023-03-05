@@ -1,5 +1,15 @@
-export function arrayMaximalAdjacentDifference(inputArray: number[]): number {
+//Essentially what is the greatest difference we can get from 2 adjacent values in an array.
 
+export function arrayMaximalAdjacentDifference(inputArray: number[]): number {
+    let maxDiff = Math.abs(inputArray[0] - inputArray[1]);
+    
+    for(let i = 0; i < inputArray.length; i++) {
+        let absoluteDiff = Math.abs(inputArray[i - 1] - inputArray[i]);
+
+        maxDiff = absoluteDiff > maxDiff ? absoluteDiff : maxDiff;
+    }
+
+    return maxDiff;
 }
 
-// console.log(arrayMaximalAdjacentDifference([2, 4, 1, 0]));
+ console.log(arrayMaximalAdjacentDifference([2, 4, 1, 0]));
