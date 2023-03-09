@@ -7,7 +7,7 @@ export function fancyRide(l: number, fares: number[]): string {
         if(fares[i] * l <= 20) {
             return rides[i];
         }
-    } 
+    }  
 }  
 
 
