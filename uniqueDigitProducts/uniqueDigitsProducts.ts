@@ -1,4 +1,31 @@
+//Medium difficulty algorithm problem.
+
 export function uniqueDigitProducts(a: number[]): number {
+    const products: number[] = [];
+
+    a.forEach((num) => {
+        const product = getDigitProduct(num);
+
+        if(!products.includes(product)) { //Check against the array to see if its included, if not include it!
+            products.push(product);
+        }
+    });
+
+    return products.length;
+
 }
 
-// console.log(uniqueDigitProducts([2, 8, 121, 42, 222, 23]));
+function getDigitProduct(num: number) { //Gets the digit product first.
+    const digits: string[] = num.toString().split('');
+
+    let product = 1;
+
+
+    digits.forEach((digit) => {
+        product *= parseInt(digit);
+    });
+
+    return product;
+}
+      
+ console.log(uniqueDigitProducts([2, 8, 121, 42, 222, 23]));
