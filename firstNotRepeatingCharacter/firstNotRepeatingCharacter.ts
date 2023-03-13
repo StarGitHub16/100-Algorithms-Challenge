@@ -26,7 +26,7 @@ export function firstNotRepeatingCharacter(s: string): string {
         }
     }
     return answer;
-}  
+} 
 
 
  console.log(firstNotRepeatingCharacter('abacabad'));

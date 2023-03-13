@@ -6,4 +6,4 @@ export function candies(n: number, m: number): number {
     return candy * n;
 }
 
-console.log(candies(3, 10));
+console.log(candies(3, 10)); 
