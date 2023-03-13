@@ -16,7 +16,7 @@ export function tasksTypes(deadlines: number[], day: number): number[] {
         }
     });
 
-    return [today, upcoming, later]
+    return [today, upcoming, later] 
 
 
 }   
